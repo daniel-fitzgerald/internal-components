@@ -1,9 +1,5 @@
-import React, {Component} from 'react'
-
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export { default as Checkbox } from './Checkbox'
+export { default as Input } from './Input'
+export { default as Messages } from './Messages'
+export { default as Select } from './Select'
+export { default as Textarea } from './Textarea'
