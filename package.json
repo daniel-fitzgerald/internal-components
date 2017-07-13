@@ -1,6 +1,6 @@
 {
-  "name": "internal-components",
-  "version": "1.0.0",
+  "name": "@ag-components-react/internal-components",
+  "version": "0.0.2",
   "description": "internal-components React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -30,7 +30,10 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daniel-fitzgerald/internal-components.git"
+  },
   "keywords": [
     "react-component"
   ]
