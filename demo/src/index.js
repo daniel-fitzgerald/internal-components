@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-import { Input, Select } from '../../src'
+import { Input, Select, Textarea } from '../../src'
 
 import '../../pancake/css/pancake.min.css'
 
@@ -12,6 +12,7 @@ class Demo extends Component {
       <Input />
       <Select label="select1" options={[{value: '', label: 'Please select a value'}]}/>
       <Select label="select2" options={[{value: '', label: 'Please select a value'}]}/>
+      <Textarea />
     </div>
   }
 }
