@@ -10,7 +10,8 @@ class Demo extends Component {
     return <div>
       <h1>internal-components Demo</h1>
       <Input />
-      <Select options={[{value: '', label: 'Please select a value'}]}/>
+      <Select label="select1" options={[{value: '', label: 'Please select a value'}]}/>
+      <Select label="select2" options={[{value: '', label: 'Please select a value'}]}/>
     </div>
   }
 }
