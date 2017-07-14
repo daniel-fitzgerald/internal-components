@@ -1,6 +1,7 @@
 .uikit-select select {
   max-width: 500px;
-  width: 100%; }
+  width: 100%;
+  display: block }
 
   .uikit-select {
   max-width: 500px;
