@@ -45,7 +45,7 @@ class Select extends React.Component {
 
     const errorClass = showError ? 'hasError' : ''
 
-    return <div className={`text-group ${errorClass}`}>
+    return <div className={`uikit-select ${errorClass}`}>
       {label && <label htmlFor={id}>{label}</label>}
       <select {...props} id={id} className="uikit-select__element" value={value} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur}>
         {this.getOptions(options)}
