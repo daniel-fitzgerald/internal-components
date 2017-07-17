@@ -43,9 +43,9 @@ class Select extends React.Component {
     const { touched, focus } = this.state
     const showError = ((error && submitted) || (error && touched)) && !focus
 
-    const errorClass = showError ? 'hasError' : ''
+    const errorClass = showError ? ' hasError' : ''
 
-    return <div className="text-group ${errorClass}">
+    return <div className={`text-group${errorClass}`}>
       {label && <label htmlFor={id}>{label}</label>}
       <div className={`uikit-select`}>
         <select {...props} id={id} className="uikit-select__element" value={value} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur}>
