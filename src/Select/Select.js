@@ -1,5 +1,9 @@
 import React from 'react'
 
+import ReactSelect from 'react-select'
+
+import 'react-select/dist/react-select.css'
+
 import './select.css'
 
 class Select extends React.Component {
@@ -11,30 +15,26 @@ class Select extends React.Component {
     }
   }
 
-  getOptions(options = []) {
-    return options.map((option, index) => <option key={option.value} value={option.value}>{option.label}</option>)
-  }
-
-  onBlur = (e) => {
+  onBlur = (value) => {
     const { onBlur } = this.props
     this.setState({ focus: false })
     if (onBlur) {
-      onBlur(e.target.value);
+      onBlur(value ? value.value : '')
     }
   }
 
-  onChange = (e) => {
+  onChange = (value) => {
     const { onChange } = this.props
     if (onChange) {
-      onChange(e.target.value);
+      onChange(value ? value.value : '')
     }
   }
 
-  onFocus = (e) => {
+  onFocus = (value) => {
     const { onFocus } = this.props
     this.setState({ touched: true, focus: true })
     if (onFocus) {
-      onFocus(e.target.value);
+      onFocus(value ? value.value : '')
     }
   }
 
@@ -47,10 +47,9 @@ class Select extends React.Component {
 
     return <div className={`text-group${errorClass}`}>
       {label && <label htmlFor={id}>{label}</label>}
-      <div className={`uikit-select`}>
-        <select {...props} id={id} className="uikit-select__element" value={value} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur}>
-          {this.getOptions(options)}
-        </select>
+      <div>
+        <ReactSelect {...props} id={id} value={value} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} options={options}>
+        </ReactSelect>
       </div>
       {showError && <span role="alert" aria-live="polite" className={errorClass}>{error}</span>}
     </div>
